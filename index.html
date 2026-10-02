@@ -1,0 +1,3256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syed Muhamad Ans | 2021 — 2026</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fbf8fc;
+            color: #514858;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Cormorant Garamond", serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           PROGRESS
+        ========================= */
+
+        .progress-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: #a98abb;
+            z-index: 9999;
+            transition: width 0.1s;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            padding: 18px 0;
+            background: rgba(251, 248, 252, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(130, 105, 145, 0.08);
+        }
+
+        .navbar-brand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            font-weight: 600;
+            color: #514858;
+        }
+
+        .navbar-brand span {
+            color: #a783b9;
+        }
+
+        .nav-link {
+            color: #6e6575;
+            font-size: 12px;
+            margin-left: 22px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #9a72ad;
+        }
+
+
+        /* =========================
+           FLOATING SYMBOLS
+        ========================= */
+
+        .floating-elements span {
+            position: fixed;
+            z-index: 0;
+            color: rgba(160, 125, 180, 0.20);
+            pointer-events: none;
+            animation: floating 7s infinite ease-in-out;
+        }
+
+        .floating-elements span:nth-child(1) {
+            top: 15%;
+            left: 7%;
+            font-size: 22px;
+        }
+
+        .floating-elements span:nth-child(2) {
+            top: 28%;
+            right: 7%;
+            font-size: 28px;
+        }
+
+        .floating-elements span:nth-child(3) {
+            top: 70%;
+            left: 5%;
+            font-size: 25px;
+        }
+
+        .floating-elements span:nth-child(4) {
+            top: 80%;
+            right: 12%;
+            font-size: 20px;
+        }
+
+        .floating-elements span:nth-child(5) {
+            top: 50%;
+            left: 45%;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 15% 20%,
+                    rgba(213, 190, 228, 0.45),
+                    transparent 30%),
+
+                radial-gradient(circle at 85% 75%,
+                    rgba(194, 220, 231, 0.45),
+                    transparent 30%),
+
+                #fbf8fc;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 30px;
+        }
+
+        .small-heading {
+            letter-spacing: 4px;
+            font-size: 10px;
+            color: #9a7cab;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(70px, 14vw, 165px);
+            line-height: 0.8;
+            font-weight: 500;
+            color: #5c5264;
+        }
+
+        .hero h1 span {
+            color: #bda6ca;
+            font-weight: 300;
+        }
+
+        .hero h2 {
+            margin-top: 45px;
+            font-size: clamp(38px, 5vw, 67px);
+            line-height: 0.95;
+            color: #514757;
+            font-weight: 500;
+        }
+
+        .hero h2 em {
+            color: #9a76ac;
+            font-style: normal;
+        }
+
+        .hero-text {
+            margin-top: 25px;
+            line-height: 2;
+            color: #817886;
+            font-size: 14px;
+        }
+
+        .explore-btn {
+            margin-top: 25px;
+            padding: 14px 27px;
+            border-radius: 50px;
+            background: #9173a5;
+            color: white;
+            font-size: 12px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .explore-btn:hover {
+            background: #765d88;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .explore-btn i {
+            margin-left: 8px;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            color: #9a8e9f;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .section {
+            padding: 130px 0;
+        }
+
+        .section-title span {
+            font-size: 10px;
+            color: #a083b3;
+            letter-spacing: 3px;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #9a909f;
+        }
+
+        .section-title h2 {
+            margin-top: 15px;
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 0.92;
+            color: #514757;
+            font-weight: 500;
+        }
+
+        .section-title em {
+            color: #9975ab;
+            font-weight: 400;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro-section {
+            background: white;
+        }
+
+        .story-card {
+            margin-top: 55px;
+            padding: 65px;
+            border-radius: 28px;
+            background: #f5f0f8;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-mark {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 100px;
+            line-height: 45px;
+            color: #c6afd1;
+        }
+
+        .story-card p {
+            color: #706875;
+            line-height: 2;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .story-card h3 {
+            color: #8c6da2;
+            font-size: 34px;
+            margin-top: 30px;
+        }
+
+
+        /* =========================
+           FIRST SEMESTER
+        ========================= */
+
+        .beginning-section {
+            padding: 130px 0;
+            background: #f1eaf5;
+        }
+
+        .beginning-card {
+            max-width: 850px;
+            margin: 60px auto 0;
+            text-align: center;
+        }
+
+        .semester-number {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 110px;
+            color: rgba(150, 120, 170, 0.18);
+            line-height: 0.7;
+        }
+
+        .beginning-card h2 {
+            font-size: clamp(45px, 7vw, 78px);
+            color: #5b5063;
+            margin-top: 20px;
+        }
+
+        .beginning-card p {
+            max-width: 680px;
+            margin: 30px auto;
+            color: #756c7a;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .secret-btn {
+            margin-top: 20px;
+            padding: 13px 25px;
+            border: 1px solid #b99cc5;
+            border-radius: 50px;
+            background: white;
+            color: #856695;
+            transition: 0.3s;
+        }
+
+        .secret-btn:hover {
+            background: #9877aa;
+            color: white;
+        }
+
+        .secret-text {
+            max-width: 650px;
+            margin: 35px auto 0;
+            padding: 30px;
+            background: rgba(255,255,255,0.65);
+            border-radius: 20px;
+            display: none;
+            color: #665d6c;
+            line-height: 2;
+        }
+
+        .secret-text.show {
+            display: block;
+            animation: fadeUp 0.7s ease;
+        }
+
+
+        /* =========================
+           CONVERSATIONS
+        ========================= */
+
+        .conversation-section {
+            padding: 130px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .conversation-box {
+            max-width: 750px;
+            margin: 60px auto 0;
+        }
+
+        .conversation-box h2 {
+            font-size: clamp(48px, 7vw, 82px);
+            color: #574d60;
+        }
+
+        .conversation-box p {
+            color: #766d7b;
+            line-height: 2;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        .typing-box {
+            margin: 40px auto;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            color: #9673a9;
+        }
+
+
+        /* =========================
+           COUSIN SECTION
+        ========================= */
+
+        .cousin-section {
+            padding: 150px 0;
+            background:
+                radial-gradient(circle at 50% 40%,
+                    rgba(210, 190, 222, 0.6),
+                    transparent 40%),
+                #ebe4ef;
+            text-align: center;
+        }
+
+        .cousin-small {
+            letter-spacing: 5px;
+            font-size: 10px;
+            color: #9275a2;
+        }
+
+        .cousin-word {
+            margin-top: 25px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(80px, 18vw, 220px);
+            line-height: 0.7;
+            font-weight: 600;
+            color: #695b73;
+            letter-spacing: -5px;
+        }
+
+        .cousin-subtitle {
+            margin-top: 50px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 34px;
+            color: #8f6fa2;
+        }
+
+        .cousin-story {
+            max-width: 750px;
+            margin: 35px auto 0;
+            color: #716877;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .friend-note {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #9a909d;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           FUNNY / CLASS
+        ========================= */
+
+        .funny-section {
+            padding: 130px 0;
+            background: #dcecf4;
+            text-align: center;
+        }
+
+        .funny-card {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .funny-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .funny-card h2 {
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 0.9;
+            color: #526171;
+        }
+
+        .funny-card > p {
+            max-width: 700px;
+            margin: 30px auto;
+            color: #68747f;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .nickname-box {
+            margin: 40px auto 0;
+            max-width: 700px;
+            padding: 35px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 25px;
+        }
+
+        .nickname-box p {
+            color: #7a707d;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .nicknames {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .nickname {
+            padding: 9px 17px;
+            border-radius: 50px;
+            background: white;
+            color: #8b6b9d;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .nickname:hover {
+            transform: translateY(-5px) rotate(-2deg);
+        }
+
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .journey-section {
+            background: #faf8fc;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 80px auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #d9cce0;
+        }
+
+        .timeline-item {
+            width: 50%;
+            padding: 25px 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 25px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #d3bfdc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9575a8;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -20px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -20px;
+        }
+
+        .timeline-content {
+            padding: 30px;
+            background: white;
+            border-radius: 22px;
+            box-shadow: 0 10px 40px rgba(100, 80, 120, 0.06);
+        }
+
+        .timeline-content span {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #a083b1;
+        }
+
+        .timeline-content h3 {
+            margin: 10px 0;
+            font-size: 30px;
+            color: #584e63;
+        }
+
+        .timeline-content p {
+            font-size: 13px;
+            line-height: 1.9;
+            color: #817886;
+        }
+
+
+        /* =========================
+           MEMORIES
+        ========================= */
+
+        .memories-section {
+            padding: 140px 0;
+            background: #f7f2fa;
+        }
+
+        .memory-card {
+            padding: 35px;
+            margin-top: 50px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 12px 40px rgba(90, 70, 110, 0.06);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .memory-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #f1e8f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #9975ab;
+            font-size: 25px;
+        }
+
+        .memory-card h3 {
+            font-size: 32px;
+            color: #5b5063;
+        }
+
+        .memory-card p {
+            color: #7b727f;
+            font-size: 13px;
+            line-height: 2;
+            margin-top: 15px;
+        }
+
+        .memory-hidden {
+            display: none;
+            margin-top: 20px;
+            color: #92709f;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+        }
+
+        .memory-hidden.show {
+            display: block;
+            animation: fadeUp 0.6s ease;
+        }
+
+
+        /* =========================
+           SOFT SIDE
+        ========================= */
+
+        .soft-section {
+            padding: 140px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .soft-card {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .soft-card h2 {
+            font-size: clamp(50px, 7vw, 90px);
+            line-height: 0.9;
+            color: #554b5e;
+        }
+
+        .soft-card h2 em {
+            color: #9875aa;
+            font-style: normal;
+        }
+
+        .soft-card > p {
+            max-width: 680px;
+            margin: 40px auto;
+            color: #756c7b;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .soft-reveal-btn {
+            padding: 13px 25px;
+            border-radius: 50px;
+            border: 1px solid #c2a6cc;
+            background: #faf5fc;
+            color: #896a9a;
+        }
+
+        .soft-reveal {
+            display: none;
+            margin: 35px auto 0;
+            max-width: 600px;
+            padding: 30px;
+            background: #f5eef8;
+            border-radius: 20px;
+            color: #756c79;
+            line-height: 2;
+        }
+
+        .soft-reveal.show {
+            display: block;
+            animation: fadeUp 0.7s ease;
+        }
+
+
+        /* =========================
+           COLLEGE GAVE ME
+        ========================= */
+
+        .gave-section {
+            padding: 140px 0;
+            background: #eee7f2;
+        }
+
+        .gave-section h2 {
+            font-size: clamp(50px, 6vw, 78px);
+            line-height: 0.9;
+            color: #574d61;
+        }
+
+        .big-quote {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 120px;
+            color: #c1a8cd;
+        }
+
+        .college-card {
+            padding: 60px;
+            background: rgba(255,255,255,0.75);
+            border-radius: 25px;
+        }
+
+        .college-card p {
+            color: #77707d;
+            line-height: 1.9;
+        }
+
+        .college-card h3 {
+            color: #665b70;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .college-card .highlight {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 35px;
+            line-height: 1.25;
+            color: #8d70a5;
+        }
+
+
+        /* =========================
+           ADVICE
+        ========================= */
+
+        .advice-section {
+            padding: 140px 0;
+            background: #dcebf4;
+            text-align: center;
+        }
+
+        .advice-box {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .advice-number {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #8c7d90;
+            margin-bottom: 30px;
+        }
+
+        .advice-box h2 {
+            font-size: clamp(50px, 7vw, 85px);
+            line-height: 0.9;
+            color: #526171;
+        }
+
+        .advice-box h2 em {
+            color: #8e759e;
+        }
+
+        .advice-text {
+            max-width: 700px;
+            margin: 55px auto 0;
+        }
+
+        .advice-text p {
+            color: #687580;
+            line-height: 2;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .brave-line {
+            margin-top: 45px;
+            padding: 25px;
+            border-top: 1px solid rgba(100,100,100,0.15);
+            border-bottom: 1px solid rgba(100,100,100,0.15);
+            color: #596875;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 28px;
+        }
+
+        .brave-line span {
+            color: #8d70a5;
+        }
+
+
+        /* =========================
+           LETTER
+        ========================= */
+
+        .letter-section {
+            padding: 150px 0;
+            background: #faf7fc;
+        }
+
+        .letter {
+            max-width: 850px;
+            margin: auto;
+            padding: 75px;
+            background: white;
+            box-shadow: 0 25px 70px rgba(90, 70, 110, 0.09);
+            position: relative;
+        }
+
+        .letter::before {
+            content: "";
+            position: absolute;
+            inset: 15px;
+            border: 1px solid #e9e0ed;
+            pointer-events: none;
+        }
+
+        .letter-top {
+            display: flex;
+            justify-content: space-between;
+            color: #a088ac;
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        .letter h2 {
+            margin-top: 60px;
+            font-size: 78px;
+            line-height: 0.8;
+            color: #554b5e;
+        }
+
+        .letter h2 em {
+            color: #9a7db0;
+        }
+
+        .letter-body {
+            margin-top: 60px;
+        }
+
+        .letter-body p {
+            color: #716a76;
+            line-height: 2;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .letter-body strong {
+            color: #8e6ea3;
+        }
+
+        .prayer {
+            margin-top: 50px;
+            padding: 40px;
+            text-align: center;
+            background: #f5f0f7;
+            border-radius: 18px;
+        }
+
+        .prayer i {
+            color: #a184b5;
+            font-size: 25px;
+        }
+
+        .prayer p {
+            margin: 15px auto;
+            max-width: 580px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            color: #665b6e;
+        }
+
+        .prayer span {
+            font-size: 12px;
+            color: #9a7caf;
+        }
+
+        .signature {
+            margin-top: 55px;
+            text-align: right;
+        }
+
+        .signature p {
+            font-family: "Cormorant Garamond", serif;
+            color: #85798b;
+        }
+
+        .signature h3 {
+            font-size: 32px;
+            color: #8f72a5;
+        }
+
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background:
+                radial-gradient(circle at 50% 30%,
+                    rgba(187, 163, 205, 0.42),
+                    transparent 35%),
+                #e8e1ed;
+        }
+
+        .final-content {
+            max-width: 850px;
+            padding: 30px;
+        }
+
+        .final-content > p:first-child {
+            letter-spacing: 5px;
+            font-size: 10px;
+            color: #8c8092;
+        }
+
+        .final-content h1 {
+            margin-top: 40px;
+            font-size: clamp(42px, 6vw, 70px);
+            color: #584e62;
+        }
+
+        .final-content h2 {
+            margin-top: 15px;
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: 0.9;
+            color: #9075a4;
+        }
+
+        .final-heart {
+            margin: 45px auto;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a27db9;
+            font-size: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .final-small {
+            line-height: 2;
+            color: #817685;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: #4f4658;
+            color: #dcd4e2;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        footer p:last-child {
+            margin-top: 10px;
+            color: #b9a5c5;
+        }
+
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 1s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes floating {
+
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(8deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                padding: 14px 0;
+            }
+
+            .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 72px;
+            }
+
+            .hero h2 {
+                font-size: 42px;
+            }
+
+            .section {
+                padding: 90px 0;
+            }
+
+            .story-card {
+                padding: 40px 25px;
+            }
+
+            .cousin-word {
+                font-size: 95px;
+                letter-spacing: -3px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 0;
+                right: auto;
+            }
+
+            .college-card {
+                margin-top: 30px;
+                padding: 35px;
+            }
+
+            .letter {
+                padding: 45px 25px;
+            }
+
+            .letter h2 {
+                font-size: 60px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+                font-size: 58px;
+            }
+
+            .hero h2 {
+                font-size: 37px;
+            }
+
+            .cousin-word {
+                font-size: 70px;
+            }
+
+            .story-card h3 {
+                font-size: 27px;
+            }
+
+            .nickname {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PROGRESS BAR
+    ========================= -->
+
+    <div class="progress-line" id="progressLine"></div>
+
+
+    <!-- =========================
+         FLOATING ELEMENTS
+    ========================= -->
+
+    <div class="floating-elements">
+
+        <span>✦</span>
+        <span>♡</span>
+        <span>🦋</span>
+        <span>✧</span>
+        <span>♡</span>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                2021 <span>♡</span> 2026
+            </a>
+
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#story">
+                            Beginning
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cousin">
+                            Cousin
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#memories">
+                            Memories
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#advice">
+                            Words
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#letter">
+                            Letter
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                FOR SYED MUHAMAD ANS
+            </p>
+
+
+            <h1>
+                2021
+                <span>—</span>
+                2026
+            </h1>
+
+
+            <h2>
+                One chapter ended,<br>
+                <em>but one bond remained</em>
+            </h2>
+
+
+            <p class="hero-text">
+
+                Five years of classes,
+                conversations,<br>
+                little fights, laughter,
+                care and memories
+
+            </p>
+
+
+            <a href="#story"
+                class="btn explore-btn">
+
+                Start from the beginning
+
+                <i class="bi bi-arrow-down"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="scroll-down">
+
+            <span>SCROLL TO REMEMBER</span>
+
+            <i class="bi bi-chevron-down"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section id="story"
+        class="section intro-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span>01</span>
+
+                <p>THE BEGINNING</p>
+
+                <h2>
+                    We didn't know<br>
+                    <em>what was coming</em>
+                </h2>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="story-card reveal">
+
+                        <div class="quote-mark">
+                            “
+                        </div>
+
+
+                        <p>
+
+                            At the beginning,
+                            we didn't even know each other,,
+
+                            There was no special story,
+                            no special bond,
+                            nothing that could tell us
+                            how important these years
+                            would eventually become
+
+                        </p>
+
+
+                        <p>
+
+                            It was simply the beginning
+                            of a degree, a new session,
+                            new classes and new people
+
+                        </p>
+
+
+                        <p>
+
+                            And then...
+
+                        </p>
+
+
+                        <h3>
+                            The first semester happened ♡
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FIRST SEMESTER
+    ========================= -->
+
+    <section class="beginning-section">
+
+        <div class="container">
+
+            <div class="beginning-card reveal">
+
+                <div class="semester-number">
+                    01
+                </div>
+
+
+                <p class="small-heading">
+                    FIRST SEMESTER
+                </p>
+
+
+                <h2>
+                    It started<br>
+                    with a misunderstanding
+                </h2>
+
+
+                <p>
+
+                    There was a misunderstanding between us
+
+                    And strangely enough,
+                    that misunderstanding became
+                    the reason we started talking
+
+                </p>
+
+
+                <button class="secret-btn"
+                    id="misunderstandingBtn">
+
+                    What happened next?
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+                <div class="secret-text"
+                    id="misunderstandingText">
+
+                    We started talking to clear things up
+
+                    But then the conversation didn't simply
+                    stop after the misunderstanding was solved
+
+                    <br><br>
+
+                    <strong>
+                        We just kept talking...
+                    </strong>
+
+                    <br><br>
+
+                    And somehow, something that started
+                    because of a misunderstanding
+                    slowly became one of the most meaningful
+                    parts of my degree
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONVERSATIONS
+    ========================= -->
+
+    <section class="conversation-section">
+
+        <div class="container">
+
+            <div class="conversation-box reveal">
+
+                <p class="small-heading">
+                    AND THEN
+                </p>
+
+
+                <h2>
+                    We just<br>
+                    <em>kept talking</em>
+                </h2>
+
+
+                <div class="typing-box"
+                    id="typingText">
+                </div>
+
+
+                <p>
+
+                    One conversation became another,,
+
+                    Then another
+
+                    And without realizing it,
+                    those conversations became
+                    a part of our everyday life
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COUSIN
+    ========================= -->
+
+    <section id="cousin"
+        class="cousin-section">
+
+        <div class="container">
+
+            <p class="cousin-small">
+                THE PART I NEVER WANT TO FORGET
+            </p>
+
+
+            <div class="cousin-word reveal">
+                COUSIN
+            </div>
+
+
+            <h2 class="cousin-subtitle reveal">
+
+                The bond that formed
+                during our degree
+
+            </h2>
+
+
+            <p class="cousin-story reveal">
+
+                By the second semester,
+                something had changed,,
+
+                A cousin bond had found its place
+                in our story
+
+                <br><br>
+
+                It wasn't something that existed
+                from the very beginning,
+
+                It was something that formed
+                during these years —
+                through conversations,
+                understanding,
+                little arguments,
+                jokes,
+                care and countless ordinary moments
+
+                <br><br>
+
+                And honestly...
+
+                <strong>
+                    I am grateful that it happened
+                </strong>
+
+            </p>
+
+
+            <p class="friend-note">
+
+                And somewhere inside this cousin bond,
+                a beautiful friendship quietly existed too ♡
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FUNNY CLASS MEMORIES
+    ========================= -->
+
+    <section class="funny-section">
+
+        <div class="container">
+
+            <div class="funny-card reveal">
+
+                <div class="funny-icon">
+                    😂
+                </div>
+
+
+                <p class="small-heading">
+                    THE CLASS VERSION OF US
+                </p>
+
+
+                <h2>
+
+                    I was there<br>
+                    to annoy you
+
+                </h2>
+
+
+                <p>
+
+                    One thing I absolutely enjoyed
+                    was intentionally irritating you in class
+
+                    Doing the exact things that I knew
+                    would annoy you...
+
+                    and then enjoying your reaction 😂
+
+                </p>
+
+
+                <div class="nickname-box">
+
+                    <p>
+                        THE NAMES I COULDN'T STOP CALLING YOU
+                    </p>
+
+
+                    <div class="nicknames">
+
+                        <span class="nickname">
+                            karwa karela
+                        </span>
+
+                        <span class="nickname">
+                            kharoos
+                        </span>
+
+                        <span class="nickname">
+                            sariyal
+                        </span>
+
+                        <span class="nickname">
+                            kadu
+                        </span>
+
+                        <span class="nickname">
+                            shah g
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         JOURNEY
+    ========================= -->
+
+    <section class="section journey-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span>02</span>
+
+                <p>THE JOURNEY</p>
+
+                <h2>
+                    Little moments<br>
+                    <em>became memories</em>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <!-- 1 -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot">
+                        ♡
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <span>
+                            AT THE BEGINNING
+                        </span>
+
+                        <h3>
+                            We didn't know each other
+                        </h3>
+
+                        <p>
+
+                            Just two people starting
+                            a new academic chapter,
+                            without knowing that
+                            this chapter would create
+                            something so personal
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot">
+                        ✦
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <span>
+                            FIRST SEMESTER
+                        </span>
+
+                        <h3>
+                            A misunderstanding
+                        </h3>
+
+                        <p>
+
+                            A misunderstanding made
+                            us start talking
+
+                            And the conversations
+                            simply continued
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot">
+                        🦋
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <span>
+                            SECOND SEMESTER
+                        </span>
+
+                        <h3>
+                            The cousin bond
+                        </h3>
+
+                        <p>
+
+                            This was when our cousin bond
+                            became part of the story
+
+                            Something that wasn't there
+                            at the start,
+                            but slowly found its place
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot">
+                        ♡
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <span>
+                            THE YEARS AFTER
+                        </span>
+
+                        <h3>
+                            Class, jokes & memories
+                        </h3>
+
+                        <p>
+
+                            Teasing you,
+                            annoying you,
+                            talking,
+                            laughing,
+                            remembering little things
+                            and creating memories
+                            without even realizing it
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot">
+                        ✦
+                    </div>
+
+
+                    <div class="timeline-content">
+
+                        <span>
+                            2026
+                        </span>
+
+                        <h3>
+                            The degree ends
+                        </h3>
+
+                        <p>
+
+                            The academic chapter comes
+                            to an end
+
+                            But what was created
+                            during those years
+                            doesn't suddenly disappear
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MEMORIES
+    ========================= -->
+
+    <section id="memories"
+        class="memories-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span>03</span>
+
+                <p>THE MEMORIES</p>
+
+                <h2>
+                    The little things<br>
+                    <em>I will remember</em>
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4 mt-4">
+
+
+                <!-- Birthday -->
+
+                <div class="col-md-6">
+
+                    <div class="memory-card reveal"
+                        onclick="showMemory('birthday')">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-balloon-heart"></i>
+                        </div>
+
+
+                        <h3>
+                            Your Birthday
+                        </h3>
+
+
+                        <p>
+
+                            Your birthday was celebrated
+                            in class
+
+                            But the moment I remember
+                            especially is...
+
+                        </p>
+
+
+                        <div class="memory-hidden"
+                            id="birthday">
+
+                            You sang a song for me,
+
+                            <br><br>
+
+                            I don't even need a name
+                            for that song here,
+
+                            I just know that
+                            <strong>
+                                that moment was special
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Diary -->
+
+                <div class="col-md-6">
+
+                    <div class="memory-card reveal"
+                        onclick="showMemory('diary')">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-journal-heart"></i>
+                        </div>
+
+
+                        <h3>
+                            The Diary
+                        </h3>
+
+
+                        <p>
+
+                            You gifted me a diary
+
+                             something I genuinely liked
+
+                        </p>
+
+
+                        <div class="memory-hidden"
+                            id="diary">
+
+                            Some gifts become special
+                            because of what they are,
+
+                            Some become special
+                            because of who gave them
+
+                            <br><br>
+
+                            This one is special to me
+                            because it came from you ♡
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Snacks -->
+
+                <div class="col-md-6">
+
+                    <div class="memory-card reveal"
+                        onclick="showMemory('snacks')">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-cookie"></i>
+                        </div>
+
+
+                        <h3>
+                            The Snacks
+                        </h3>
+
+
+                        <p>
+
+                            You bring snacks
+                            for me...
+
+                            almost like someone brings
+                            snacks for a small child 😂
+
+                        </p>
+
+
+                        <div class="memory-hidden"
+                            id="snacks">
+
+                            It wasn't just the snacks,
+
+                            <br><br>
+
+                            It was the little care behind them
+                            that made me smile
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Searching -->
+
+                <div class="col-md-6">
+
+                    <div class="memory-card reveal"
+                        onclick="showMemory('searching')">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-eye"></i>
+                        </div>
+
+
+                        <h3>
+                            Looking For Me
+                        </h3>
+
+
+                        <p>
+
+                            I always liked those little moments
+                            when you would look around the class
+                            searching for me
+
+                        </p>
+
+
+                        <div class="memory-hidden"
+                            id="searching">
+
+                            You probably didn't realize
+                            how noticeable those little moments
+                            were to me
+
+                            <br><br>
+
+                            But I noticed,
+
+                            And I liked them ♡
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SOFT SIDE
+    ========================= -->
+
+    <section class="soft-section">
+
+        <div class="container">
+
+            <div class="soft-card reveal">
+
+                <p class="small-heading">
+                    THE PART PEOPLE DON'T ALWAYS SEE
+                </p>
+
+
+                <h2>
+
+                    Behind the<br>
+                    <em>kharoos face...</em>
+
+                </h2>
+
+
+                <p>
+
+                    From outside,
+                    you can look angry,
+                    serious,
+                    rude,
+                    or simply like someone
+                    people don't want to mess with
+
+                    <br><br>
+
+                    And honestly,
+                    girls are scared of you 😂
+
+                    <br><br>
+
+                    You usually don't even talk
+                    much to girls
+
+                    But somehow,
+                    behind all of that,
+                    there is a genuinely soft-hearted
+                    and caring person
+
+                </p>
+
+
+                <button class="soft-reveal-btn"
+                    id="softBtn">
+
+                    There is more...
+
+                </button>
+
+
+                <div class="soft-reveal"
+                    id="softReveal">
+
+                    I have seen the side of you
+                    that not everyone notices
+
+                    The side that cares,
+
+                    The side that remembers small things
+
+                    <br><br>
+
+                    That softer side of you
+                    is one of the things
+                    I will always remember
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COLLEGE GAVE ME
+    ========================= -->
+
+    <section class="gave-section">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+
+                <div class="col-lg-5 reveal">
+
+                    <p class="small-heading">
+                        WHAT DID COLLEGE GIVE ME?
+                    </p>
+
+
+                    <h2>
+
+                        Something<br>
+                        I will always<br>
+                        <em>be grateful for</em>
+
+                    </h2>
+
+
+                    <div class="big-quote">
+                        “
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="college-card reveal">
+
+                        <p>
+
+                            If someone ever asks me,
+
+                            <strong>
+                                “What did college give you?”
+                            </strong>
+
+                        </p>
+
+
+                        <h3>
+                            I will proudly say:
+                        </h3>
+
+
+                        <p class="highlight">
+
+                            “It gave me a relationship
+                            that I never expected,
+                            a cousin bond that formed
+                            during these years,
+                            and memories I will always
+                            carry with me”
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         YOU IN MY EYES
+    ========================= -->
+
+    <section class="qualities-section"
+        style="padding:130px 0;background:white;">
+
+        <div class="container">
+
+            <div class="section-title text-center reveal">
+
+                <span>04</span>
+
+                <p>YOU, IN MY EYES</p>
+
+                <h2>
+                    The person<br>
+                    <em>I saw behind everything</em>
+                </h2>
+
+            </div>
+
+
+            <div class="row justify-content-center g-4 mt-4">
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="memory-card reveal">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-house-heart"></i>
+                        </div>
+
+                        <h3>
+                            A Wonderful Son
+                        </h3>
+
+                        <p>
+                            Someone who values family,
+                            responsibilities and the people
+                            who raised him
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="memory-card reveal">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <h3>
+                            A Wonderful Brother
+                        </h3>
+
+                        <p>
+                            Someone who understands
+                            the importance of being there
+                            for the people around him
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="memory-card reveal">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+
+                        <h3>
+                            A Wonderful Cousin
+                        </h3>
+
+                        <p>
+                            The cousin bond that formed
+                            during these years and became
+                            something genuinely precious
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="memory-card reveal">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+
+                        <h3>
+                            A Wonderful Teacher
+                        </h3>
+
+                        <p>
+                            Someone who can share knowledge and
+                            guide others with purity
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="memory-card reveal">
+
+                        <div class="memory-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+
+                        <h3>
+                            A Wonderful Student
+                        </h3>
+
+                        <p>
+                            Someone still learning,
+                            growing and moving forward
+                            toward the future
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ADVICE
+    ========================= -->
+
+    <section id="advice"
+        class="advice-section">
+
+        <div class="container">
+
+            <div class="advice-box reveal">
+
+                <div class="advice-number">
+                    05
+                </div>
+
+
+                <p class="small-heading">
+                    SOMETHING I WANT YOU TO REMEMBER
+                </p>
+
+
+                <h2>
+
+                    If you ever change,<br>
+                    <em>change for the better</em>
+
+                </h2>
+
+
+                <div class="advice-text">
+
+                    <p>
+
+                        There is just one thing
+                        I want you to promise yourself:
+
+                        if you ever bring a change
+                        in yourself,
+                        let it always be a positive one
+
+                    </p>
+
+
+                    <p>
+
+                        Never let anger,
+                        difficult situations,
+                        disappointment
+                        or temporary circumstances
+                        destroy the goodness within you
+
+                    </p>
+
+
+                    <p>
+
+                        You are already a beautiful person
+                        from the inside,
+
+                        and your parents have raised you
+                        with beautiful values
+
+                        You have also worked hard
+                        to shape yourself into
+                        the person you are today
+
+                    </p>
+
+
+                    <p>
+
+                        Life will always have
+                        its ups and downs,
+
+                        That is simply a part of life
+
+                        But never let the difficult days
+                        make you weak
+
+                    </p>
+
+                </div>
+
+
+                <div class="brave-line">
+
+                    <span>Remember:</span>
+
+                    You are brave.
+                    You are capable.
+
+                    <br>
+
+                    You still have so much to achieve
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LETTER
+    ========================= -->
+
+    <section id="letter"
+        class="letter-section">
+
+        <div class="container">
+
+            <div class="letter reveal">
+
+                <div class="letter-top">
+
+                    <span>
+                        FOR SYED MUHAMAD ANS
+                    </span>
+
+                    <span>
+                        ♡
+                    </span>
+
+                </div>
+
+
+                <h2>
+
+                    A letter<br>
+                    <em>for you</em>
+
+                </h2>
+
+
+                <div class="letter-body">
+
+
+                    <p>
+
+                        I don't know where life
+                        will take us from here,
+
+                        Maybe our paths will become
+                        completely different,
+
+                        Maybe we won't see each other
+                        as often as we did during
+                        these years
+
+                    </p>
+
+
+                    <p>
+
+                        But one thing I know is that
+
+                        <strong>
+                            my prayers will always
+                            be with you
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        I will always pray for
+                        your happiness,
+                        your success,
+                        your peace,
+                        your health,
+                        and every good thing
+                        that life can bring you
+
+                    </p>
+
+
+                    <p>
+
+                        I hope you achieve everything
+                        you dream of,
+
+                        I hope you become the person
+                        you want to become,
+
+                        And I hope that no matter
+                        how much life changes,
+                        you never lose the goodness
+                        that already exists inside you
+
+                    </p>
+
+
+                    <p>
+
+                        Thank you for all those
+                        little things that perhaps
+                        seemed ordinary to you...
+
+                        but were never ordinary to me
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- DUA -->
+
+                <div class="prayer">
+
+                    <i class="bi bi-stars"></i>
+
+
+                    <p>
+
+                        May Allah always keep you happy,
+                        successful, peaceful and protected,,
+
+                        May Allah give you endless
+                        opportunities,
+
+                        keep your heart soft,
+
+                        protect you from every hardship,
+
+                        and bless every step
+                        you take in life
+
+                    </p>
+
+
+                    <span>
+                        Ameeeen sum Ameeen🤍
+                    </span>
+
+                </div>
+
+
+
+                <!-- FINAL PERSONAL LINE -->
+
+                <div class="signature">
+
+                    <p>
+                        From your annoying czn,
+                    </p>
+
+                    <h3>
+                        Shah G's annoying cousin ♡
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL QUESTION
+    ========================= -->
+
+    <section class="section"
+        style="background:#fff;text-align:center;">
+
+        <div class="container">
+
+            <div class="reveal">
+
+                <p class="small-heading">
+                    BEFORE YOU LEAVE
+                </p>
+
+
+                <h2 style="
+                    font-size:clamp(50px,7vw,90px);
+                    color:#594f62;
+                    line-height:.9;
+                ">
+
+                    Do you know<br>
+                    <em style="color:#9673a9;">
+                        what I will remember most?
+                    </em>
+
+                </h2>
+
+
+                <button id="finalRevealBtn"
+                    class="secret-btn mt-4">
+
+                    Tell me...
+
+                    <i class="bi bi-heart"></i>
+
+                </button>
+
+
+                <div id="finalReveal"
+                    style="
+                        display:none;
+                        max-width:650px;
+                        margin:40px auto 0;
+                        padding:35px;
+                        background:#f5eef8;
+                        border-radius:25px;
+                        color:#746b79;
+                        line-height:2;
+                    ">
+
+                    Not one single moment
+
+                    <br><br>
+
+                    I will remember
+                    the whole feeling of these years,,
+
+                    The misunderstandings,
+                    the conversations,
+                    the teasing,
+                    the birthday wishes,
+                    the songs,
+                    the little looks around the class,
+                    and all the things
+                    that made our cousin bond
+                    what it became
+
+                    <br><br>
+
+                    <strong style="color:#906da1;">
+                        I will remember that
+                        this bond happened
+                    </strong>
+
+                    <br><br>
+
+                    And I will always be grateful
+                    that it did
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final-section">
+
+        <div class="final-content reveal">
+
+            <p>
+                SYED MUHAMAD ANS
+            </p>
+
+
+            <h1>
+                The degree may end...
+            </h1>
+
+
+            <h2>
+
+                but this cousin bond<br>
+                will always be a part<br>
+                of my story
+
+            </h2>
+
+
+            <div class="final-heart">
+                ♡
+            </div>
+
+
+            <p class="final-small">
+
+                Some people enter your life
+                without warning
+
+                <br>
+
+                And somehow,
+                they leave behind memories
+                you never want to lose
+
+                <br><br>
+
+               06 Dec 2021 — 02 oct 2026
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Made from memories, duas & a little craziness 🦋
+        </p>
+
+        <p>
+            2021 — ∞
+        </p>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <script>
+
+
+        /* =========================
+           MOBILE NAVBAR
+        ========================= */
+
+        let navLinks = document.querySelectorAll(".nav-link");
+
+        let navbar = document.querySelector(".navbar-collapse");
+
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                if (navbar.classList.contains("show")) {
+
+                    let button =
+                        document.querySelector(".navbar-toggler");
+
+                    button.click();
+
+                }
+
+            });
+
+        });
+
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        let revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        let observer =
+            new IntersectionObserver(
+
+                function(entries) {
+
+                    entries.forEach(function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        revealElements.forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+
+
+        /* =========================
+           MISUNDERSTANDING REVEAL
+        ========================= */
+
+        let misunderstandingBtn =
+            document.getElementById(
+                "misunderstandingBtn"
+            );
+
+        let misunderstandingText =
+            document.getElementById(
+                "misunderstandingText"
+            );
+
+
+        misunderstandingBtn.addEventListener(
+            "click",
+            function() {
+
+                misunderstandingText.classList.toggle(
+                    "show"
+                );
+
+                if (
+                    misunderstandingText.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    misunderstandingBtn.innerHTML =
+                        "That's how it started ♡";
+
+                }
+
+                else {
+
+                    misunderstandingBtn.innerHTML =
+                        'What happened next? <i class="bi bi-arrow-right"></i>';
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================
+           TYPEWRITER
+        ========================= */
+
+        let typingText =
+            document.getElementById(
+                "typingText"
+            );
+
+
+        let typingMessages = [
+
+            "Then we just kept talking...",
+
+            "One conversation became another...",
+
+            "And somehow, talking became normal.",
+
+            "And normal slowly became special."
+
+        ];
+
+
+        let messageIndex = 0;
+
+        let characterIndex = 0;
+
+        let deleting = false;
+
+
+        function typeWriter() {
+
+            let current =
+                typingMessages[messageIndex];
+
+
+            if (!deleting) {
+
+                typingText.textContent =
+                    current.substring(
+                        0,
+                        characterIndex + 1
+                    );
+
+                characterIndex++;
+
+
+                if (
+                    characterIndex ===
+                    current.length
+                ) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typeWriter,
+                        1800
+                    );
+
+                    return;
+
+                }
+
+            }
+
+            else {
+
+                typingText.textContent =
+                    current.substring(
+                        0,
+                        characterIndex - 1
+                    );
+
+                characterIndex--;
+
+
+                if (characterIndex === 0) {
+
+                    deleting = false;
+
+                    messageIndex++;
+
+                    if (
+                        messageIndex >=
+                        typingMessages.length
+                    ) {
+
+                        messageIndex = 0;
+
+                    }
+
+                }
+
+            }
+
+
+            setTimeout(
+                typeWriter,
+                deleting ? 35 : 70
+            );
+
+        }
+
+
+        typeWriter();
+
+
+
+        /* =========================
+           MEMORY CLICK
+        ========================= */
+
+        function showMemory(id) {
+
+            let selected =
+                document.getElementById(id);
+
+
+            selected.classList.toggle("show");
+
+        }
+
+
+
+        /* =========================
+           SOFT SIDE REVEAL
+        ========================= */
+
+        let softBtn =
+            document.getElementById("softBtn");
+
+        let softReveal =
+            document.getElementById("softReveal");
+
+
+        softBtn.addEventListener(
+            "click",
+            function() {
+
+                softReveal.classList.toggle("show");
+
+
+                if (
+                    softReveal.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    softBtn.textContent =
+                        "You already know this side ♡";
+
+                }
+
+                else {
+
+                    softBtn.textContent =
+                        "There is more...";
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================
+           FINAL REVEAL
+        ========================= */
+
+        let finalRevealBtn =
+            document.getElementById(
+                "finalRevealBtn"
+            );
+
+        let finalReveal =
+            document.getElementById(
+                "finalReveal"
+            );
+
+
+        finalRevealBtn.addEventListener(
+            "click",
+            function() {
+
+                finalReveal.style.display =
+                    "block";
+
+                finalRevealBtn.style.display =
+                    "none";
+
+                finalReveal.style.animation =
+                    "fadeUp 1s ease";
+
+            }
+        );
+
+
+
+        /* =========================
+           SCROLL PROGRESS
+        ========================= */
+
+        let progressLine =
+            document.getElementById(
+                "progressLine"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                let scrollTop =
+                    document.documentElement
+                        .scrollTop;
+
+                let scrollHeight =
+                    document.documentElement
+                        .scrollHeight -
+                    document.documentElement
+                        .clientHeight;
+
+
+                let percentage =
+                    (scrollTop / scrollHeight) *
+                    100;
+
+
+                progressLine.style.width =
+                    percentage + "%";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
